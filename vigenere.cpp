@@ -2,7 +2,8 @@
 #include "vigenere.h"
 #include <cctype>
 char shiftCharAlpha(char c, char rshiftAlpha)
-{   int rshift = (int) rshiftAlpha % 97;
+{   
+    int rshift = (int) rshiftAlpha % 97;
     int num = (int)c;
     if (num >= 65 && num < 97)
     {
