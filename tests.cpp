@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "caeser.h"
 #include "vigenere.h"
+#include "decryption.h"
 // add your tests here
 
 TEST_CASE("TASK B"){
@@ -21,4 +22,10 @@ TEST_CASE("TASK C")
 {
 
     CHECK(encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!");
+}
+
+TEST_CASE("TASK D")
+{
+    CHECK(decryptCaesar("Bfd yt Lt!", 5) == "Way to Go!");
+    CHECK(decryptCaesar("Rovvy, Gybvn!", 10) == "Hello, World!");
 }
