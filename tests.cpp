@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "caeser.h"
-
+#include "vigenere.h"
 // add your tests here
 
 TEST_CASE("TASK B"){
@@ -14,4 +14,11 @@ TEST_CASE("TASK B"){
     CHECK(shiftChar('Z', 4) == 'D');
 
     CHECK(encryptCaesar("Way to Go!", 5) == "Bfd yt Lt!");
+    CHECK(encryptCaesar("Hello, World!", 10) == "Rovvy, Gybvn!");
+}
+
+TEST_CASE("TASK C")
+{
+
+    CHECK(encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!");
 }
