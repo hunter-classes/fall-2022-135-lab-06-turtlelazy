@@ -14,5 +14,18 @@ char shiftChar(char c, int rshift){
         return (char) ((c - 97 + rshift) % 26 + 97);
     }
 
+    else{
+        return c;
+    }
+
     return ' ';
+}
+
+std::string encryptCaesar(std::string plaintext, int rshift){
+    std::string return_string = "";
+    for(int i = 0; i < plaintext.length();i++){
+        return_string += shiftChar(plaintext[i],rshift);
+    }
+
+    return return_string;
 }
