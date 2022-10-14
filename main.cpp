@@ -1,9 +1,25 @@
 #include <iostream>
-
-
-#include "funcs.h"
+#include "caesar.h"
+#include "vigenere.h"
+#include "decryption.h"
 
 int main()
 {
-  return 0;
+    std::cout << "shiftChar 'a' by 5\n";
+    std::cout <<  shiftChar('a',5) << "\n";
+
+    std::cout << "Caeser Cipher Encryption: 'Hello World!' , Shift 5 \n";
+    std::cout << encryptCaesar("Hello World!",10) << "\n";
+    std::string a = encryptCaesar("Hello World!",10);
+
+    std::cout << "Vigenere Cipher Encryption: 'Hello World!' , Key 'cake' \n";
+    std::cout << encryptVigenere("Hello World!", "cake") << "\n";
+    std::string b = encryptVigenere("Hello World!", "cake");
+
+    std::cout << "Decrypt Caesar: " << a << ", Shift 10\n";
+    std::cout << decryptCaesar(a,10) << "\n";
+
+    std::cout << "Decrypt Vigenere: " << b << ", Key 'cake'\n";
+    std::cout << decryptVigenere(b,"cake") << "\n";
+    return 0;
 }
